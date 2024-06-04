@@ -1,0 +1,77 @@
+.title {
+  position: relative;
+  color: rgb(28, 27, 27);
+  font-size: 3.5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-start;
+  margin: 3rem 0rem 0rem 13rem;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #ff4500;
+  transition: all 0.3s ease;
+}
+
+.title:hover::after {
+  width: 25%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  margin: 3rem 10rem 0rem 10rem;
+}
+
+.formAppointment {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  color: #000000;
+}
+
+.formAppointment p a {
+  color: #ff4500;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.formAppointment p a:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 960px) {
+  .title {
+    margin: 3rem 0rem 0rem 5rem;
+    font-size: 3rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+    margin: 3rem 5rem 3rem 5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .title {
+    margin: 3rem 0rem 0rem 3rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    grid-gap: 3rem;
+    margin: 2rem 5rem 3rem 5rem;
+  }
+}

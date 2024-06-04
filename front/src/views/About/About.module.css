@@ -1,0 +1,97 @@
+.title {
+  position: relative;
+  color: #1c1b1b;
+  font-size: 3.5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  margin: 2.5rem 0rem 2.5rem 0rem;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 0;
+  bottom: 0;
+  left: 10;
+  background-color: #ff4500;
+  transition: all 0.3s ease;
+}
+
+.title:hover::after {
+  width: 14%;
+}
+
+.text {
+  position: relative;
+  color: #1c1b1b;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  margin: 0 15rem 2.5rem 15rem;
+}
+
+.redes {
+  color: #1c1b1b;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  margin: 2.5rem 0rem 1rem 0rem;
+  text-decoration: #ff4500 underline solid 3px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+}
+
+.icons a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 960px) {
+  .title {
+    font-size: 3rem;
+  }
+  .title:hover::after {
+    width: 20%;
+  }
+  .text {
+    font-size: 1.3rem;
+    margin: 0 5rem 3rem 5rem;
+  }
+  .icons {
+    margin: 1.5rem 0rem 2rem 0rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  .title:hover::after {
+    width: 25%;
+  }
+  .text {
+    font-size: 1.1rem;
+    margin: 0 3rem 2rem 3rem;
+  }
+  .redes {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  .title:hover::after {
+    width: 30%;
+  }
+  .text {
+    font-size: 1rem;
+    margin: 0 2rem 2rem 2rem;
+  }
+}
